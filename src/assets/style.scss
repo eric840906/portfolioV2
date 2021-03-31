@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;800&display=swap');
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+a {
+  text-decoration: none;
+  color: #6c757d;
+  &:hover {
+    color: #dc9898c9;
+  }
+}
+.img-circle {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 100%;
+  height: 20rem;
+  width: 20rem;
+}
+.bd-filter {
+  backdrop-filter: blur(3px);
+  background-color: #c3c1ff24;
+}
+
+.glass-btn{
+  overflow: hidden;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  &::before{
+    content: ' ';
+    background-color: #ffffff80;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transform: skew(45deg) translateX(250%);
+    transition: transform 0.5s ease;
+  }
+  &:hover{
+    box-shadow: inset 0px 0px 1px 1px #ffffff80;
+    &::before{
+      transform: skew(45deg) translateX(-220%);
+    }
+  }
+}
