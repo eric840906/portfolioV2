@@ -17,16 +17,11 @@
       <div class="carousel-item h-100 bd-filter">
         <transition :name="transitionName" mode="out-in">
           <div
-            class="h-100 d-flex flex-wrap justify-content-center p-3"
+            class="h-100 d-flex flex-wrap justify-content-center p-3 overflow-hidden"
             :key="carouselArr[carouselIndex].id"
           >
             <div
               class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-sm-center w-100"
-              data-aos="zoom-in"
-              data-aos-offset="200"
-              data-aos-delay="200"
-              data-aos-once="false"
-              data-aos-easing="ease-in-out"
             >
               <img
                 class="carousel-img"
@@ -37,41 +32,21 @@
             <div class="col-12 d-flex flex-column text-md-start text-center">
               <h3
                 class="mt-md-0 mt-3 text-uppercase text-center"
-                data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-delay="500"
-                data-aos-once="false"
-                data-aos-easing="ease-in-out"
               >
                 {{ carouselArr[carouselIndex].title }}
               </h3>
               <p
                 class="text-center"
-                data-aos="fade-right"
-                data-aos-offset="200"
-                data-aos-delay="700"
-                data-aos-once="false"
-                data-aos-easing="ease-in-out"
               >
                 {{ carouselArr[carouselIndex].text }}
               </p>
               <h3
                 class="text-center"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="900"
-                data-aos-once="false"
-                data-aos-easing="ease-in-out"
               >
                 Stack
               </h3>
               <div
                 class="mt-auto d-flex flex-wrap justify-content-evenly"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="1000"
-                data-aos-once="false"
-                data-aos-easing="ease-in-out"
               >
                 <div
                   class="mb-3 text-center"
@@ -81,11 +56,7 @@
                   <span class="text-cneter">{{ item }}</span>
                 </div>
               </div>
-              <div class="d-flex mx-auto mb-5" data-aos="zoom-in"
-              data-aos-offset="0"
-              data-aos-delay="1200"
-              data-aos-once="false"
-              data-aos-easing="ease-in-out">
+              <div class="d-flex mx-auto mb-5">
                 <a
                   class="text-center text-md-end text-capitalize bd-filter me-3 px-3 shadow glass-btn"
                   :href="carouselArr[carouselIndex].repo"
@@ -269,12 +240,20 @@ export default defineComponent({
   }
 }
 .fade-enter-from {
+<<<<<<< HEAD
   transform: translate(-33%, 0%);
+=======
+  transform: translate3d(-30%,0,0);
+>>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(-33%, 30%);
   opacity: 0;
 }
 .fade-leave-to {
+<<<<<<< HEAD
   transform: translate(30%, 0%);
+=======
+  transform: translate3d(30%,0,0);
+>>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(33%, -30%);
   opacity: 0;
 }
@@ -289,12 +268,20 @@ export default defineComponent({
   transition: all 0.8s ease;
 }
 .fadereverse-enter-from {
+<<<<<<< HEAD
   transform: translate(30%, 0%);
+=======
+  transform: translate3d(30%,0,0);
+>>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(33%, -30%);
   opacity: 0;
 }
 .fadereverse-leave-to {
+<<<<<<< HEAD
   transform: translate(-33%, 0%);
+=======
+  transform: translate3d(-30%,0,0);
+>>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(-33%, 30%);
   opacity: 0;
 }

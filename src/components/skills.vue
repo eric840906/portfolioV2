@@ -6,7 +6,6 @@
         data-aos="fade-up"
         data-aos-offset="300"
         :data-aos-delay="100*index"
-        data-aos-once="false"
         data-aos-easing="ease-in-out"
       >
         <h3

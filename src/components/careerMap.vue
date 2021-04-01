@@ -10,7 +10,6 @@
       :data-aos="`${index % 2 ? 'fade-left' : 'fade-right'}`"
       data-aos-offset="0"
       data-aos-delay="500"
-      data-aos-once="false"
       data-aos-easing="ease-in-out"
     >
       <div
@@ -93,7 +92,6 @@ export default defineComponent({
       border-radius: 10px;
       top: -3rem;
       padding: 0.5rem;
-      left: -1rem;
       transition: 0.5s all ease;
       opacity: 0;
     }
@@ -108,12 +106,18 @@ export default defineComponent({
     border-width: 0 5px 5px 0;
     .career-point {
       right: -0.95rem;
+      &::before {
+        left: -5rem;
+      }
     }
   }
   &:nth-child(2n + 1) {
     border-width: 0 0 5px 5px;
     .career-point {
       left: -0.95rem;
+      &::before {
+        right: -5rem;
+      }
     }
   }
 }

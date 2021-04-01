@@ -1,77 +1,17 @@
 <template>
-  <Progress></Progress>
-  <Navbar :screenSize="screenSize" @toProject="toProject" @toSkills="toSkills" @toIntro="toIntro" @toAbout="toAbout" @toTop="toTop"></Navbar>
-  <!-- <div class="d-flex flex-wrap p-3 bd-filter shadow rounded">
-    <div class="col-md-6 p-3">
-      <div class="d-flex justify-content-center p-3">
-        <img
-          class="img-fluid"
-          src="https://i.pinimg.com/originals/c4/0d/7a/c40d7a7060fb74926c257db982b6ddaf.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-    <div class="col-md-6 p-3">
-      <div class="d-flex flex-column justify-content-center align-items-center h-100 p-3">
-        <div class="w-100 text-center d-flex my-2">
-          <fa icon="address-card" type="far" class="profile-icon"></fa>
-          <span class="align-middle mx-auto">Eric Chiu</span>
-        </div>
-        <div class="w-100 text-center d-flex mb-2">
-          <fa icon="envelope" type="far" class="profile-icon"></fa>
-          <span class="align-middle mx-auto"
-            ><a href="mailto:eric840906@hotmail.com.tw"
-              >eric840906@hotmail.com.tw</a
-            ></span
-          >
-        </div>
-        <div class="w-100 text-center d-flex mb-2">
-          <fa icon="pencil-alt" type="fas" class="profile-icon"></fa>
-          <span class="align-middle mx-auto"
-            ><a href="https://hackmd.io/@c04lOMyVQZSN-SPA2h-MeA"
-              >Hackmd notes</a
-            ></span
-          >
-        </div>
-        <div>
-          <a
-            class=" align-middle mx-auto position-relative overflow-hidden w-100 text-center d-flex my-3 p-3 shadow resume-btn"
-            href="https://hackmd.io/@c04lOMyVQZSN-SPA2h-MeA"
-            target="blank"
-            >Resume Download</a
-          >
-        </div>
-        <div class="w-100 d-flex justify-content-evenly mb-2">
-          <a
-            href="https://github.com/eric840906"
-            target="blank"
-            class="p-3 shadow rounded-circle glass-btn link-btn"
-          >
-            <fa icon="github-alt" type="fab" class="profile-icon"></fa>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/eric-chiu-911a5a174/"
-            target="blank"
-            class="p-3 shadow rounded-circle glass-btn link-btn"
-          >
-            <fa icon="linkedin-in" type="fab" class="profile-icon"></fa>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div> -->
+  <!-- <Progress></Progress> -->
+  <Navbar @toProject="toProject" @toSkills="toSkills" @toIntro="toIntro" @toAbout="toAbout" @toTop="toTop"></Navbar>
   <div class="container" style="height: 100vh">
     <Me></Me>
   </div>
-  <div class="wave-bg" id="intro-block">
+  <div class="wave-bg" id="intro-block" style="margin-top: 15vh">
     <div class="wave"></div>
-    <div class="container">
+    <div class="container overflow-hidden">
       <div class="row mb-5">
         <Catehead
           data-aos="fade-left"
           data-aos-offset="300"
           data-aos-delay="100"
-          data-aos-once="false"
           data-aos-easing="ease-in-out"
           :title="'What i can do'"
         ></Catehead>
@@ -81,13 +21,12 @@
   </div>
   <div class="wave-bg" id="skill-block">
     <div class="wave-btm"></div>
-    <div class="container">
+    <div class="container overflow-hidden">
       <div class="row pb-5 flex-column">
         <Catehead
           data-aos="fade-right"
           data-aos-duration="4000"
           data-aos-offset="300"
-          data-aos-once="false"
           data-aos-easing="ease-in-out"
           :title="'my skills'"
         ></Catehead>
@@ -99,12 +38,11 @@
     <div class="wave"></div>
     <div class="wave-btm"></div>
     <div class="container">
-    <div class="row mb-5 flex-column">
+    <div class="row mb-5 flex-column  overflow-hidden">
       <Catehead
         data-aos="fade-left"
         data-aos-offset="300"
         data-aos-delay="100"
-        data-aos-once="false"
         data-aos-easing="ease-in-out"
         :title="'my projects'"
       ></Catehead>
@@ -112,19 +50,17 @@
         data-aos="fade-right"
         data-aos-offset="300"
         data-aos-delay="100"
-        data-aos-once="false"
         data-aos-easing="ease-in-out"
       ></Carousel>
     </div>
   </div>
   </div>
-  <div class="container" id="about-block">
+  <div class="container overflow-hidden" id="about-block">
     <div class="row mb-5 flex-column">
       <Catehead
         data-aos="fade-right"
         data-aos-offset="300"
         data-aos-delay="100"
-        data-aos-once="false"
         data-aos-easing="ease-in-out"
         :title="'about me'"
       ></Catehead>
@@ -134,13 +70,22 @@
 </template>
 
 <script lang="ts">
+<<<<<<< HEAD
 import { defineAsyncComponent, defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import Progress from '@/components/progressBar.vue'
+=======
+import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
+// import Progress from '@/components/progressBar.vue'
+>>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
 import Me from '@/components/nameCard.vue'
-import Career from '@/components/careerMap.vue'
 import Navbar from '@/components/Navbar.vue'
+<<<<<<< HEAD
 // import Carousel from '@/components/carousel.vue'
+=======
+>>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
 import Catehead from '@/components/categoryhead.vue'
+import Carousel from '@/components/carousel.vue'
+import Career from '@/components/careerMap.vue'
 import Intro from '@/components/siteIntro.vue'
 import Skills from '@/components/skills.vue'
 import gsap from 'gsap'
@@ -148,18 +93,20 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 AOS.init({
-  disable: 'phone'
+  disable: 'phone',
+  throttleDelay: 99,
+  once: true
 })
 const Carousel = defineAsyncComponent(() => import('@/components/carousel.vue')
 )
 export default defineComponent({
   components: {
     Navbar,
-    Progress,
+    // Progress,
     Me,
-    Carousel,
     Catehead,
     Intro,
+    Carousel,
     Skills,
     Career
   },
@@ -213,13 +160,17 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-image: url('~@/assets/background.jpg');
+<<<<<<< HEAD
   div {
     overflow-x: hidden;
   }
+=======
+  overflow-x: hidden;
+>>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
 }
 .wave-bg {
   position: relative;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   .wave {
     position: absolute;
     background-image: url('~@/assets/wave1.svg');
