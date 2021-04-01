@@ -1,6 +1,6 @@
 <template>
   <!-- <Progress></Progress> -->
-  <Navbar @toProject="toProject" @toSkills="toSkills" @toIntro="toIntro" @toAbout="toAbout" @toTop="toTop"></Navbar>
+  <Navbar :screenSize="screenSize" @toProject="toProject" @toSkills="toSkills" @toIntro="toIntro" @toAbout="toAbout" @toTop="toTop"></Navbar>
   <div class="container" style="height: 100vh">
     <Me></Me>
   </div>
