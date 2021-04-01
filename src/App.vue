@@ -63,7 +63,7 @@
   <div class="container" style="height: 100vh">
     <Me></Me>
   </div>
-  <div class="wave-bg" id="intro-block">
+  <div class="wave-bg" id="intro-block" style="margin-top: 15vh">
     <div class="wave"></div>
     <div class="container">
       <div class="row mb-5">
@@ -211,6 +211,7 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-image: url('~@/assets/background.jpg');
+  overflow-x: hidden;
 }
 .wave-bg {
   position: relative;

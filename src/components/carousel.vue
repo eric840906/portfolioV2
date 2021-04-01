@@ -17,7 +17,7 @@
       <div class="carousel-item h-100 bd-filter">
         <transition :name="transitionName" mode="out-in">
           <div
-            class="h-100 d-flex flex-wrap justify-content-center p-3"
+            class="h-100 d-flex flex-wrap justify-content-center p-3 overflow-hidden"
             :key="carouselArr[carouselIndex].id"
           >
             <div
@@ -68,7 +68,7 @@
               <div
                 class="mt-auto d-flex flex-wrap justify-content-evenly"
                 data-aos="fade-up"
-                data-aos-offset="200"
+                data-aos-offset="400"
                 data-aos-delay="1000"
                 data-aos-once="false"
                 data-aos-easing="ease-in-out"
@@ -82,7 +82,7 @@
                 </div>
               </div>
               <div class="d-flex mx-auto mb-5" data-aos="zoom-in"
-              data-aos-offset="0"
+              data-aos-offset="500"
               data-aos-delay="1200"
               data-aos-once="false"
               data-aos-easing="ease-in-out">
