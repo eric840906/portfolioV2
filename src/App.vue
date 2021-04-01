@@ -70,7 +70,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
 // import Progress from '@/components/progressBar.vue'
 import Me from '@/components/nameCard.vue'
 import Navbar from '@/components/Navbar.vue'
@@ -100,7 +100,9 @@ export default defineComponent({
     Career
   },
   setup () {
+    const screenSize = ref(0)
     gsap.registerPlugin(ScrollToPlugin)
+    screenSize.value = window.innerWidth
     const toProject = () => {
       gsap.to(window, { duration: 0, scrollTo: '#project-block' })
     }
@@ -116,7 +118,20 @@ export default defineComponent({
     const toTop = () => {
       gsap.to(window, { duration: 0, scrollTo: 0 })
     }
+    onMounted(() => {
+      window.addEventListener('resize', e => {
+        const w = e.target as Window
+        screenSize.value = w.innerWidth
+      })
+    })
+    onUnmounted(() => {
+      window.removeEventListener('resize', e => {
+        const w = e.target as Window
+        screenSize.value = w.innerWidth
+      })
+    })
     return {
+      screenSize,
       toProject,
       toSkills,
       toAbout,
