@@ -70,24 +70,15 @@
 </template>
 
 <script lang="ts">
-<<<<<<< HEAD
 import { defineAsyncComponent, defineComponent, onMounted, onUnmounted, ref } from 'vue'
-import Progress from '@/components/progressBar.vue'
-=======
-import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
 // import Progress from '@/components/progressBar.vue'
->>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
 import Me from '@/components/nameCard.vue'
 import Navbar from '@/components/Navbar.vue'
-<<<<<<< HEAD
 // import Carousel from '@/components/carousel.vue'
-=======
->>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
 import Catehead from '@/components/categoryhead.vue'
-import Carousel from '@/components/carousel.vue'
-import Career from '@/components/careerMap.vue'
-import Intro from '@/components/siteIntro.vue'
-import Skills from '@/components/skills.vue'
+// import Career from '@/components/careerMap.vue'
+// import Intro from '@/components/siteIntro.vue'
+// import Skills from '@/components/skills.vue'
 import gsap from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import 'aos/dist/aos.css'
@@ -97,7 +88,13 @@ AOS.init({
   throttleDelay: 99,
   once: true
 })
-const Carousel = defineAsyncComponent(() => import('@/components/carousel.vue')
+const Carousel = defineAsyncComponent(() => import('@/components/carousel.vue' /* webpackChunkName:"Carousel" */)
+)
+const Career = defineAsyncComponent(() => import('@/components/careerMap.vue' /* webpackChunkName:"Career" */)
+)
+const Intro = defineAsyncComponent(() => import('@/components/siteIntro.vue' /* webpackChunkName:"Intro" */)
+)
+const Skills = defineAsyncComponent(() => import('@/components/skills.vue' /* webpackChunkName:"Skills" */)
 )
 export default defineComponent({
   components: {
@@ -160,13 +157,9 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-image: url('~@/assets/background.jpg');
-<<<<<<< HEAD
   div {
-    overflow-x: hidden;
+    overflow: hidden;
   }
-=======
-  overflow-x: hidden;
->>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
 }
 .wave-bg {
   position: relative;

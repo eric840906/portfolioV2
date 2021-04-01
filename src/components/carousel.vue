@@ -240,20 +240,12 @@ export default defineComponent({
   }
 }
 .fade-enter-from {
-<<<<<<< HEAD
-  transform: translate(-33%, 0%);
-=======
   transform: translate3d(-30%,0,0);
->>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(-33%, 30%);
   opacity: 0;
 }
 .fade-leave-to {
-<<<<<<< HEAD
-  transform: translate(30%, 0%);
-=======
   transform: translate3d(30%,0,0);
->>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(33%, -30%);
   opacity: 0;
 }
@@ -268,20 +260,12 @@ export default defineComponent({
   transition: all 0.8s ease;
 }
 .fadereverse-enter-from {
-<<<<<<< HEAD
-  transform: translate(30%, 0%);
-=======
   transform: translate3d(30%,0,0);
->>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(33%, -30%);
   opacity: 0;
 }
 .fadereverse-leave-to {
-<<<<<<< HEAD
-  transform: translate(-33%, 0%);
-=======
   transform: translate3d(-30%,0,0);
->>>>>>> 3843a2f325c34ec9bbae82a4405e01046ee797f1
   // transform: translate(-33%, 30%);
   opacity: 0;
 }
