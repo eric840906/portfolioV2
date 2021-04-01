@@ -157,9 +157,7 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-image: url('~@/assets/background.jpg');
-  div {
-    overflow: hidden;
-  }
+  overflow-x: hidden;
 }
 .wave-bg {
   position: relative;
