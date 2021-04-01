@@ -134,12 +134,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
+import { defineAsyncComponent, defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import Progress from '@/components/progressBar.vue'
 import Me from '@/components/nameCard.vue'
 import Career from '@/components/careerMap.vue'
 import Navbar from '@/components/Navbar.vue'
-import Carousel from '@/components/carousel.vue'
+// import Carousel from '@/components/carousel.vue'
 import Catehead from '@/components/categoryhead.vue'
 import Intro from '@/components/siteIntro.vue'
 import Skills from '@/components/skills.vue'
@@ -150,6 +150,8 @@ import AOS from 'aos'
 AOS.init({
   disable: 'phone'
 })
+const Carousel = defineAsyncComponent(() => import('@/components/carousel.vue')
+)
 export default defineComponent({
   components: {
     Navbar,
@@ -211,6 +213,9 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-image: url('~@/assets/background.jpg');
+  div {
+    overflow-x: hidden;
+  }
 }
 .wave-bg {
   position: relative;

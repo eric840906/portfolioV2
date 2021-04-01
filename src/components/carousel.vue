@@ -269,11 +269,13 @@ export default defineComponent({
   }
 }
 .fade-enter-from {
-  transform: translate(-33%, 30%);
+  transform: translate(-33%, 0%);
+  // transform: translate(-33%, 30%);
   opacity: 0;
 }
 .fade-leave-to {
-  transform: translate(33%, -30%);
+  transform: translate(30%, 0%);
+  // transform: translate(33%, -30%);
   opacity: 0;
 }
 .fade-enter-to,
@@ -287,11 +289,44 @@ export default defineComponent({
   transition: all 0.8s ease;
 }
 .fadereverse-enter-from {
-  transform: translate(33%, -30%);
+  transform: translate(30%, 0%);
+  // transform: translate(33%, -30%);
   opacity: 0;
 }
 .fadereverse-leave-to {
-  transform: translate(-33%, 30%);
+  transform: translate(-33%, 0%);
+  // transform: translate(-33%, 30%);
   opacity: 0;
+}
+
+.flip-enter-from {
+  transform: rotate3d(1, 1, 1, -180deg) scale(0.5);
+  opacity: 0;
+}
+.flip-leave-to {
+  transform: rotate3d(1, 1, 1, -270deg) scale(0.5);
+  opacity: 0;
+}
+.flip-enter-to,
+.flip-leave-from {
+  opacity: 1;
+}
+.flip-enter-active,
+.flip-leave-active,
+.flipreverse-enter-active,
+.flipreverse-leave-active {
+  transition: all 0.8s ease;
+}
+.flipreverse-enter-from {
+  transform: rotate3d(1, 1, 1, 180deg) scale(0.5);
+  opacity: 0;
+}
+.flipreverse-leave-to {
+  transform: rotate3d(1, 1, 1, 270deg) scale(0.5);
+  opacity: 0;
+}
+.flip-leave-enter-to,
+.flip-leave-leave-from {
+  opacity: 1;
 }
 </style>

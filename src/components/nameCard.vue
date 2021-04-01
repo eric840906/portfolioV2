@@ -125,7 +125,6 @@ export default defineComponent({
   border-radius: 100%;
 }
 .profile-card {
-  height: 80vh;
   margin-top: 10vh;
 }
 .profile-icon {
