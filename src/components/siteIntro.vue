@@ -8,7 +8,6 @@
       data-aos="flip-left"
       data-aos-offset="300"
       data-aos-delay="100"
-      data-aos-once="false"
       data-aos-easing="ease-in-out"
     >
       <div class="card-body shadow">
@@ -27,7 +26,6 @@
       data-aos="flip-left"
       data-aos-offset="300"
       data-aos-delay="200"
-      data-aos-once="false"
       data-aos-easing="ease-in-out"
     >
       <div class="card-body shadow">
@@ -44,7 +42,6 @@
       data-aos="flip-left"
       data-aos-offset="300"
       data-aos-delay="300"
-      data-aos-once="false"
       data-aos-easing="ease-in-out"
     >
       <div class="card-body shadow">

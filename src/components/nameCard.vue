@@ -1,5 +1,5 @@
 <template>
-  <div class="row mb-5 justify-content-center">
+  <div class="row mb-5 justify-content-center overflow-hidden">
     <div class="col-12">
       <div
         class="profile-card d-flex flex-column justify-content-center align-items-center p-3 bd-filter shadow rounded"
@@ -100,11 +100,13 @@ export default defineComponent({
         duration: 0.8,
         delay: 0.2 * +el.dataset.index
       })
+      el.style.opacity = '1'
+      el.style.transform = 'translateY(0px)'
     }
     gsap.registerPlugin(TextPlugin)
     const tl = gsap.timeline()
     onMounted(() => {
-      tl.to('#my-intro', { duration: 5, text: 'HI! My name is Eric,<br> a front-end developer.' }, '1')
+      tl.to('#my-intro', { duration: 2, text: 'HI! My name is Eric,<br> a front-end developer.' }, '1')
     })
     return {
       infoArr,
