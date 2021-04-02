@@ -4,10 +4,9 @@
   <div class="container" style="height: 100vh">
     <Me></Me>
   </div>
-  <div class="wave-bg" id="intro-block" style="margin-top: 15vh">
-    <div class="wave"></div>
+  <div class="container-fluid wave" id="intro-block">
     <div class="container overflow-hidden">
-      <div class="row mb-5">
+      <div class="row">
         <Catehead
           data-aos="fade-left"
           data-aos-offset="300"
@@ -19,66 +18,59 @@
       </div>
     </div>
   </div>
-  <div class="wave-bg" id="skill-block">
-    <div class="wave-btm"></div>
-    <div class="container overflow-hidden">
-      <div class="row pb-5 flex-column">
+  <div class="container overflow-hidden">
+    <div class="row pb-5 flex-column">
+      <Catehead
+        data-aos="fade-right"
+        data-aos-duration="4000"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-out"
+        :title="'my skills'"
+      ></Catehead>
+      <Skills></Skills>
+    </div>
+  </div>
+  <div class="container-fluid wave-btm">
+    <div class="container">
+      <div class="row pb-5 flex-column  overflow-hidden">
         <Catehead
-          data-aos="fade-right"
-          data-aos-duration="4000"
+          data-aos="fade-left"
           data-aos-offset="300"
+          data-aos-delay="100"
           data-aos-easing="ease-in-out"
-          :title="'my skills'"
+          :title="'my projects'"
         ></Catehead>
-        <Skills></Skills>
+        <Carousel
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+          style="z-index: 2;"
+        ></Carousel>
       </div>
     </div>
   </div>
-  <div class="wave-bg" id="project-block">
-    <div class="wave"></div>
-    <div class="wave-btm"></div>
-    <div class="container">
-    <div class="row mb-5 flex-column  overflow-hidden">
-      <Catehead
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-delay="100"
-        data-aos-easing="ease-in-out"
-        :title="'my projects'"
-      ></Catehead>
-      <Carousel
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-delay="100"
-        data-aos-easing="ease-in-out"
-      ></Carousel>
-    </div>
-  </div>
-  </div>
-  <div class="container overflow-hidden" id="about-block">
-    <div class="row mb-5 flex-column">
-      <Catehead
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-delay="100"
-        data-aos-easing="ease-in-out"
-        :title="'about me'"
-      ></Catehead>
-      <Career></Career>
+  <div class="container-fluid wave">
+    <div class="container overflow-hidden" id="about-block">
+      <div class="row mb-5 flex-column">
+        <Catehead
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+          :title="'about me'"
+        ></Catehead>
+        <Career style="z-index: 2;"></Career>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineAsyncComponent, defineComponent, onMounted, onUnmounted, ref } from 'vue'
-// import Progress from '@/components/progressBar.vue'
 import Me from '@/components/nameCard.vue'
 import Navbar from '@/components/Navbar.vue'
-// import Carousel from '@/components/carousel.vue'
 import Catehead from '@/components/categoryhead.vue'
-// import Career from '@/components/careerMap.vue'
-// import Intro from '@/components/siteIntro.vue'
-// import Skills from '@/components/skills.vue'
 import gsap from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import 'aos/dist/aos.css'
@@ -159,129 +151,96 @@ export default defineComponent({
   background-image: url('~@/assets/background.jpg');
   overflow-x: hidden;
 }
-.wave-bg {
+.wave {
   position: relative;
-  // background-attachment: fixed;
-  .wave {
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 10rem;
+  &::before {
+    content: '';
     position: absolute;
     background-image: url('~@/assets/wave1.svg');
-    background-size: cover;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 300%;
+    opacity: 0.6;
     height: 320px;
-    animation: wavy 10s linear infinite;
-    @media (max-width: 1024px) {
-      animation: wavy-mobile 10s linear infinite;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url('~@/assets/wave1.svg');
-      background-size: cover;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.6;
-      height: 320px;
-      animation: wavy-reverse 15s linear infinite;
-      @media (max-width: 1024px) {
-        animation: wavy-mobile-reverse 15s linear infinite;
-      }
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('~@/assets/wave1.svg');
-      background-size: cover;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.4;
-      height: 320px;
-      animation-delay: 5s;
-      animation: wavy-reverse 15s linear infinite;
-      @media (max-width: 1024px) {
-        animation: wavy-mobile-reverse 15s linear infinite;
-      }
-    }
+    transform: translate3d(0%, 0px, 0px);
+    animation: wavy-reverse 70s linear infinite;
   }
-  .wave-btm {
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('~@/assets/wave1.svg');
+    top: 0;
+    left: 0;
+    width: 300%;
+    opacity: 0.4;
+    height: 320px;
+    transform: translate3d(0%, 0px, 0px);
+    animation: wavy 35s linear infinite;
+  }
+}
+.wave-btm {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  &::before {
+    content: '';
     position: absolute;
     background-image: url('~@/assets/wave2.svg');
-    background-size: cover;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 300%;
+    opacity: 0.6;
     height: 320px;
-    animation: wavy 20s linear infinite;
-    @media (max-width: 1024px) {
-      animation: wavy-mobile 20s linear infinite;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url('~@/assets/wave2.svg');
-      background-size: cover;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.6;
-      height: 320px;
-      animation: wavy-reverse 30s linear infinite;
-      @media (max-width: 1024px) {
-        animation: wavy-mobile-reverse 30s linear infinite;
-      }
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('~@/assets/wave2.svg');
-      background-size: cover;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.4;
-      animation-delay: 5s;
-      height: 320px;
-      animation: wavy-reverse 30s linear infinite;
-      @media (max-width: 1024px) {
-        animation: wavy-mobile-reverse 30s linear infinite;
-      }
-    }
+    transform: translate3d(0%, 0px, 0px);
+    animation: wavy-reverse 130s linear infinite;
   }
-}
-@keyframes wavy {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 99.4vw;
-  }
-}
-@keyframes wavy-mobile {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 1440px;
-  }
-}
-@keyframes wavy-reverse {
-  0% {
-    background-position-x: 99.4vw;
-  }
-  100% {
-    background-position-x: 0;
-  }
-}
-@keyframes wavy-mobile-reverse {
-  0% {
-    background-position-x: 1440px;
-  }
-  100% {
-    background-position-x: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('~@/assets/wave2.svg');
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    opacity: 0.4;
+    animation-delay: 5s;
+    height: 320px;
+    transform: translate3d(0%, 0px, 0px);
+    animation: wavy 65s linear infinite;
   }
 }
 
+@keyframes wavy {
+  0% {
+    transform: translate3d(-50%, 0px, 0px);
+    opacity: 0.5
+  }
+  50% {
+    transform: translate3d(0%, 0px, 0px);
+    opacity: 1
+  }
+  100% {
+    transform: translate3d(-50%, 0px, 0px);
+    opacity: 0.5
+  }
+}
+
+@keyframes wavy-reverse {
+  0% {
+    transform: translate3d(0%, 0px, 0px);
+    opacity: 1
+  }
+  50% {
+    transform: translate3d(-50%, 0px, 0px);
+    opacity: 0.5
+  }
+  100% {
+    transform: translate3d(0%, 0px, 0px);
+    opacity: 1
+  }
+}
 </style>

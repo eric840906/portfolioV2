@@ -25,6 +25,7 @@ export default defineComponent({
   &::after {
     content: attr(data-title);
     position: absolute;
+    z-index: 2;
     font-size: 5rem;
     color: #dc9898c9;
     left: 4rem;

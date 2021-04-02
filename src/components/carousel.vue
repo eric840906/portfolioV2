@@ -174,7 +174,6 @@ export default defineComponent({
         carouselArr.value.length
     }
     return {
-      // carousel,
       carouselIndex,
       carouselControl,
       carouselArr,
