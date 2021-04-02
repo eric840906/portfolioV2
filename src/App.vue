@@ -168,6 +168,9 @@ export default defineComponent({
     height: 320px;
     transform: translate3d(0%, 0px, 0px);
     animation: wavy-reverse 70s linear infinite;
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
   &::after {
     content: '';
@@ -180,6 +183,9 @@ export default defineComponent({
     height: 320px;
     transform: translate3d(0%, 0px, 0px);
     animation: wavy 35s linear infinite;
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 }
 .wave-btm {
@@ -198,6 +204,9 @@ export default defineComponent({
     height: 320px;
     transform: translate3d(0%, 0px, 0px);
     animation: wavy-reverse 130s linear infinite;
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
   &::after {
     content: '';
@@ -211,6 +220,9 @@ export default defineComponent({
     height: 320px;
     transform: translate3d(0%, 0px, 0px);
     animation: wavy 65s linear infinite;
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 }
 
