@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 d-flex flex-wrap">
-    <div class="col-12 col-md-4 my-3 m-md-0 px-3 overflow-hidden" v-for="(item,index) in skills" :key="item.category">
+    <div class="col-12 col-md-4 my-3 m-md-0 px-3" v-for="(item,index) in skills" :key="item.category">
       <div
         class="d-flex flex-column align-items-center shadow bd-filter p-3 skill-card"
         data-aos="fade-up"

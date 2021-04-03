@@ -1,5 +1,5 @@
 <template>
-  <div class="row mb-5 justify-content-center overflow-hidden">
+  <div class="row mb-5 justify-content-center">
     <div class="col-12">
       <div
         class="profile-card d-flex flex-column justify-content-center align-items-center p-3 bd-filter shadow rounded"

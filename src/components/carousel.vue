@@ -106,12 +106,8 @@ export default defineComponent({
         title: 'Fullstack E-commerce',
         text: 'E-commerce website with self-built backend',
         stack: ['Vuejs', 'Typescript', 'Nodejs', 'Express', 'MongoDB'],
-        repo: '#',
-        demo: '#',
-        author: {
-          name: 'Lynn',
-          image: 'https://i.imgur.com/J9DkbOj.png'
-        }
+        repo: 'https://github.com/eric840906/eCommerce',
+        demo: 'https://eric840906.github.io/eCommerce/#/'
       },
       {
         url: require('@/assets/project2.png'),
@@ -120,11 +116,7 @@ export default defineComponent({
         text: 'Simple web app to caculate daily calories and nutrition',
         stack: ['Vuejs', 'Javascript', 'Nodejs', 'Express', 'MongoDB'],
         repo: 'https://github.com/eric840906/WeightHelper',
-        demo: 'https://eric840906.github.io/WeightHelper/#/',
-        author: {
-          name: 'Lann',
-          image: 'https://i.imgur.com/ZhhA0LG.png'
-        }
+        demo: 'https://eric840906.github.io/WeightHelper/#/'
       },
       {
         url: require('@/assets/project3.png'),
@@ -133,11 +125,7 @@ export default defineComponent({
         text: 'E-commerce website with dummy product api provided by online course',
         stack: ['Vuejs', 'javascript', 'scss', 'JQuery'],
         repo: 'https://github.com/eric840906/vuecli3Project1',
-        demo: 'https://eric840906.github.io/vuecli3Project1/#/home',
-        author: {
-          name: 'Vella',
-          image: 'https://i.imgur.com/FWcLGNn.png'
-        }
+        demo: 'https://eric840906.github.io/vuecli3Project1/#/home'
       },
       {
         url: require('@/assets/project5.png'),
@@ -146,11 +134,7 @@ export default defineComponent({
         text: 'First portfolion page, inspired by glass morphism design',
         stack: ['Vuejs', 'Javascript', 'html', 'css'],
         repo: 'https://github.com/eric840906/portfolio',
-        demo: 'https://eric840906.github.io/portfolio/#/',
-        author: {
-          name: 'Vella',
-          image: 'https://i.imgur.com/FWcLGNn.png'
-        }
+        demo: 'https://eric840906.github.io/portfolio/#/'
       },
       {
         url: require('@/assets/project4.png'),
@@ -159,11 +143,7 @@ export default defineComponent({
         text: 'Mask map to track store available during covid-19 burst time',
         stack: ['Javascript', 'html', 'css'],
         repo: 'https://github.com/eric840906/javascript-practice-maskMap',
-        demo: 'https://eric840906.github.io/javascript-practice-maskMap/',
-        author: {
-          name: 'Vella',
-          image: 'https://i.imgur.com/FWcLGNn.png'
-        }
+        demo: 'https://eric840906.github.io/javascript-practice-maskMap/'
       }
     ])
     const transitionName = ref('')
