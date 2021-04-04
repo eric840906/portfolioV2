@@ -16,8 +16,12 @@ a {
   width: 20rem;
 }
 .bd-filter {
-  backdrop-filter: blur(3px);
-  background-color: #c3c1ff24;
+  @media (min-width: 768px) {
+    backdrop-filter: blur(3px);
+    background-color: #c3c1ff24;
+    background-image: none;
+  }
+  background-image: radial-gradient(#e0c2ff57, white 78%);
 }
 
 .glass-btn{

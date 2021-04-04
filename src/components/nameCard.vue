@@ -6,7 +6,7 @@
       >
         <img
           class="img-fluid user-img"
-          src="https://i.pinimg.com/originals/c4/0d/7a/c40d7a7060fb74926c257db982b6ddaf.jpg"
+          src="~@/assets/profilePic.jpg"
           alt=""
           data-aos="zoom-in-up"
         />

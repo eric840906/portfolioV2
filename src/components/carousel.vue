@@ -58,13 +58,13 @@
               </div>
               <div class="d-flex mx-auto mb-5">
                 <a
-                  class="text-center text-md-end text-capitalize bd-filter me-3 px-3 shadow glass-btn"
+                  class="text-center text-capitalize me-3 px-3 shadow glass-btn project-link"
                   :href="carouselArr[carouselIndex].repo"
                   target="blank"
                   >Repo</a
                 >
                 <a
-                  class="text-center text-md-end text-capitalize bd-filter px-3 shadow glass-btn"
+                  class="text-center text-capitalize px-3 shadow glass-btn project-link"
                   :href="carouselArr[carouselIndex].demo"
                   target="blank"
                   >Site</a
@@ -202,6 +202,9 @@ export default defineComponent({
       color: #dc9898c9;
     }
   }
+}
+.project-link {
+  width: 100px;
 }
 .author-info {
   background-color: #eef0f14a;
