@@ -76,7 +76,8 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 AOS.init({
-  throttleDelay: 99
+  throttleDelay: 99,
+  once: true
 })
 const Carousel = defineAsyncComponent(() => import('@/components/carousel.vue' /* webpackChunkName:"Carousel" */)
 )
