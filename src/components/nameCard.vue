@@ -94,19 +94,18 @@ export default defineComponent({
     }
     const enter = (el: HTMLElement) => {
       if (!el.dataset.index) return
+      console.log(el)
       gsap.to(el, {
         opacity: 1,
         y: 0,
         duration: 0.8,
         delay: 0.2 * +el.dataset.index
       })
-      el.style.opacity = '1'
-      el.style.transform = 'translateY(0px)'
     }
     gsap.registerPlugin(TextPlugin)
     const tl = gsap.timeline()
     onMounted(() => {
-      tl.to('#my-intro', { duration: 2, text: 'HI! My name is Eric,<br> a front-end developer.' }, '1')
+      tl.to('#my-intro', { duration: 5, text: 'HI! My name is Eric,<br> a front-end developer.' }, '1')
     })
     return {
       infoArr,
